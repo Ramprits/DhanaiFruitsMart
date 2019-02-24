@@ -1,15 +1,19 @@
-import React from "react";
-import PropTypes from "prop-types";
 import AppBar from "@material-ui/core/AppBar";
-import CameraIcon from "@material-ui/icons/PhotoCamera";
+import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import { withStyles } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import { withStyles } from "@material-ui/core/styles";
+import CameraIcon from "@material-ui/icons/PhotoCamera";
+import PropTypes from "prop-types";
+import React from "react";
 
 const styles = theme => ({
   appBar: {
     position: "relative"
+  },
+  toolbarTitle: {
+    flex: 1
   },
   icon: {
     marginRight: theme.spacing.unit * 2
@@ -55,7 +59,6 @@ const styles = theme => ({
   }
 });
 
-
 function Layout(props) {
   const { classes } = props;
 
@@ -65,9 +68,17 @@ function Layout(props) {
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <CameraIcon className={classes.icon} />
-          <Typography variant="h6" color="inherit" noWrap>
+          <Typography
+            variant="h6"
+            color="inherit"
+            noWrap
+            className={classes.toolbarTitle}
+          >
             Dhanai Fruits Mart
           </Typography>
+          <Button style={{ color: "white" }} variant="outlined">
+            Login
+          </Button>
         </Toolbar>
       </AppBar>
       <main>{props.children}</main>
