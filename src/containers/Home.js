@@ -52,7 +52,6 @@ const styles = theme => ({
   }
 });
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const fruits = ["Chikoo", "Mango", "Orange", "Apple", "Graps", "Banana"];
 class Home extends Component {
   render() {
@@ -101,7 +100,7 @@ class Home extends Component {
         <div className={classNames(classes.layout, classes.cardGrid)}>
           {/* End hero unit */}
           <Grid container spacing={40}>
-            {cards.map(card => (
+            {[...Array(12)].map((card, i) => (
               <Grid item key={card} sm={6} md={4} lg={3}>
                 <Card className={classes.card}>
                   <CardMedia
@@ -111,7 +110,7 @@ class Home extends Component {
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      Heading {i}
                     </Typography>
                     <Typography>
                       This is a media card. You can use this section to describe
