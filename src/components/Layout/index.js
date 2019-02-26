@@ -1,3 +1,5 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -6,7 +8,6 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import CameraIcon from "@material-ui/icons/PhotoCamera";
 import PropTypes from "prop-types";
-import React from "react";
 
 const styles = theme => ({
   appBar: {
@@ -76,8 +77,10 @@ function Layout(props) {
           >
             Dhanai Fruits Mart
           </Typography>
-          <Button style={{ color: "white" }} variant="outlined">
-            Login
+          <Button variant="outlined">
+            <Link to="/signin" style={{ color: "white" }}>
+              Login
+            </Link>
           </Button>
         </Toolbar>
       </AppBar>
