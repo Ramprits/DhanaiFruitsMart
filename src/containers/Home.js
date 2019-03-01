@@ -101,8 +101,8 @@ class Home extends Component {
         <div className={classNames(classes.layout, classes.cardGrid)}>
           {/* End hero unit */}
           <Grid container spacing={40}>
-            {[...Array(20)].map((card, i) => (
-              <Grid item key={card} sm={6} md={4} lg={3}>
+            {[...Array(4)].map((card, i) => (
+              <Grid item key={i} xs={12} sm={6} md={4} lg={3}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
@@ -110,10 +110,15 @@ class Home extends Component {
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
-                    <Typography style={{textTransform:"capitalize"}} gutterBottom variant="h5" component="h2">
+                    <Typography
+                      style={{ textTransform: "capitalize" }}
+                      gutterBottom
+                      variant="h5"
+                      component="h2"
+                    >
                       {Feker.company.bsBuzz()}
                     </Typography>
-                    <Typography style={{textTransform:"capitalize"}}>
+                    <Typography style={{ textTransform: "capitalize" }}>
                       {Feker.commerce.department()} <br />
                       {Feker.address.country()}-{Feker.address.state()} <br />
                       {Feker.address.city()}

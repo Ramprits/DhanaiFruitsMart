@@ -8,7 +8,6 @@ export default class App extends Component {
       <Fragment>
         <BrowserRouter>
           <Switch>
-            {/* <Redirect from="/" to="/home" /> */}
             <Route exact path="/" component={Home} />
             <Route path="/signin" component={Signin} />
           </Switch>
